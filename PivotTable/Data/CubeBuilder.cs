@@ -89,6 +89,10 @@ namespace PivotTable.Data
                 {
                     return CubeDimension.UnspecifiedMeasurementIndex;
                 }
+                if (ReferenceEquals(measurement, CubeDimension.AggregateMeasurement))
+                {
+                    return CubeDimension.AggregateMeasurementIndex;
+                }
                 return dimension.AddMeasurement(measurement);
             }
 
