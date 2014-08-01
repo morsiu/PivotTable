@@ -1,0 +1,14 @@
+﻿<Window x:Class="PivotTable.Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:PivotTable.Controls;assembly=PivotTable"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <c:PivotTable
+            Padding="20"
+            Margin="40"
+            Background="Red"
+            BorderBrush="Blue"
+            BorderThickness="3" />
+    </Grid>
+</Window>

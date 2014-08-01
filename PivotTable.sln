@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.21901.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotTable.Sample", "PivotTable.Sample\PivotTable.Sample.csproj", "{6B61478B-E23E-458C-843A-9EFD262086EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotTable", "PivotTable\PivotTable.csproj", "{231EE89E-CA49-4F4F-9956-00FC179D877B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotTable.Test", "PivotTable.Test\PivotTable.Test.csproj", "{B79DA45F-E218-4E03-A5AD-BD90DB7820F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B61478B-E23E-458C-843A-9EFD262086EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B61478B-E23E-458C-843A-9EFD262086EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B61478B-E23E-458C-843A-9EFD262086EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B61478B-E23E-458C-843A-9EFD262086EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{231EE89E-CA49-4F4F-9956-00FC179D877B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231EE89E-CA49-4F4F-9956-00FC179D877B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231EE89E-CA49-4F4F-9956-00FC179D877B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231EE89E-CA49-4F4F-9956-00FC179D877B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B79DA45F-E218-4E03-A5AD-BD90DB7820F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79DA45F-E218-4E03-A5AD-BD90DB7820F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79DA45F-E218-4E03-A5AD-BD90DB7820F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79DA45F-E218-4E03-A5AD-BD90DB7820F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
