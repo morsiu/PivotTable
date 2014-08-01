@@ -4,7 +4,7 @@ namespace PivotTable.Sample.Data
 {
     public static class SampleCubes
     {
-        private static readonly object Any = CubeDimension.AggregateMeasurement;
+        private static readonly object Sum = CubeDimension.AggregateMeasurement;
 
         public static Cube Sales
         {
@@ -20,9 +20,9 @@ namespace PivotTable.Sample.Data
                     .AddFact(1000, 2014, 2, "Asia", "Shirts")
                     .AddFact(100, 2014, 2, "Asia", "Trousers")
 
-                    .AddFact(2200, 2014, 1, Any, Any)
-                    .AddFact(2200, 2014, 2, Any, Any)
-                    .AddFact(4400, 2014, Any, Any, Any)
+                    .AddFact(2200, 2014, 1, Sum, Sum)
+                    .AddFact(2200, 2014, 2, Sum, Sum)
+                    .AddFact(4400, 2014, Sum, Sum, Sum)
                     .Build();
             }
         }

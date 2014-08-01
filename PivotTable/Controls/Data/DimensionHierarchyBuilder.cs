@@ -37,7 +37,6 @@ namespace PivotTable.Controls.Data
                 var hierarchyKey = new DimensionHierarchyKey(filteredFactKey, measurements);
                 hierarchyKeys.Add(hierarchyKey);
             }
-
             return hierarchyKeys;
         }
 
