@@ -13,6 +13,11 @@ namespace PivotTable.Data
             get { return _dimensions.Count; }
         }
 
+        public IReadOnlyList<int> Dimensions
+        {
+            get { return _dimensions; }
+        }
+
         public DimensionHierarchyDefinition(IReadOnlyList<int> dimensions)
         {
             _dimensions = dimensions;

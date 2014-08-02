@@ -33,7 +33,7 @@ namespace PivotTable.Controls.Data
             var hierarchyKeys = new SortedSet<DimensionHierarchyKey>();
             foreach (var filteredFactKey in filteredFactKeys)
             {
-                var measurements = filteredFactKey.GetMeasurements(_cube);
+                var measurements = filteredFactKey.GetMeasurements(_cube, _definition.Dimensions);
                 var hierarchyKey = new DimensionHierarchyKey(filteredFactKey, measurements);
                 hierarchyKeys.Add(hierarchyKey);
             }

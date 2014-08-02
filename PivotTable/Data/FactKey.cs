@@ -18,20 +18,18 @@ namespace PivotTable.Data
             return StructuralComparisons.StructuralEqualityComparer.Equals(_measurements, other._measurements);
         }
 
-        public object[] GetMeasurements(Cube _cube)
+        public object[] GetMeasurements(Cube cube, IReadOnlyList<int> dimensions)
         {
             var measurements = new List<object>();
-            for (int dimensionIndex = 0; dimensionIndex < _measurements.Count; ++dimensionIndex)
+            for (int index = 0; index < dimensions.Count; ++index)
             {
-                var measurementIndex = _measurements[dimensionIndex];
-                if (measurementIndex != CubeDimension.UnspecifiedMeasurementIndex)
-                {
-                    var measurement =
-                        measurementIndex != CubeDimension.AggregateMeasurementIndex
-                        ? _cube.Dimensions[dimensionIndex].Measurements[measurementIndex]
-                        : CubeDimension.AggregateMeasurement;
-                    measurements.Add(measurement);
-                }
+                var dimensionsIndex = dimensions[index];
+                var measurementIndex = _measurements[dimensionsIndex];
+                var measurement =
+                    measurementIndex != CubeDimension.AggregateMeasurementIndex
+                    ? cube.Dimensions[dimensionsIndex].Measurements[measurementIndex]
+                    : CubeDimension.AggregateMeasurement;
+                measurements.Add(measurement);
             }
             return measurements.ToArray();
         }
