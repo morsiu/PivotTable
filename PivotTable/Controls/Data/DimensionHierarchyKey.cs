@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using PivotTable.Data;
 
-namespace PivotTable.Data
+namespace PivotTable.Controls.Data
 {
     public sealed class DimensionHierarchyKey : IComparable<DimensionHierarchyKey>
     {
@@ -13,6 +14,11 @@ namespace PivotTable.Data
         {
             _factKey = factKey;
             _measurements = measurements;
+        }
+
+        public IReadOnlyList<object> Measurements
+        {
+            get { return _measurements; }
         }
 
         public int CompareTo(DimensionHierarchyKey other)

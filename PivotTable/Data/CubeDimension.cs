@@ -10,7 +10,7 @@ namespace PivotTable.Data
         public static readonly object UnspecifiedMeasurement = new object();
         public const int UnspecifiedMeasurementIndex = -1;
         public static readonly object AggregateMeasurement = new object();
-        public const int AggregateMeasurementIndex = -1;
+        public const int AggregateMeasurementIndex = -2;
 
         public CubeDimension(
             object name,

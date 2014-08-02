@@ -90,6 +90,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PivotTable.Test\PivotTable.Test.csproj">
+      <Project>{b79da45f-e218-4e03-a5ad-bd90db7820f6}</Project>
+      <Name>PivotTable.Test</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PivotTable\PivotTable.csproj">
       <Project>{231ee89e-ca49-4f4f-9956-00fc179d877b}</Project>
       <Name>PivotTable</Name>

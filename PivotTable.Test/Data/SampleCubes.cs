@@ -10,7 +10,7 @@ namespace PivotTable.Sample.Data
         {
             get
             {
-                return new CubeBuilder("Year", "Quarter", "Division", "ProductCategory")
+                return new CubeBuilder("Year", "Quarter", "Region", "ProductCategory")
                     .AddFact(1000, 2014, 1, "Europe", "Shirts")
                     .AddFact(100, 2014, 1, "Europe", "Trousers")
                     .AddFact(1000, 2014, 2, "Europe", "Shirts")

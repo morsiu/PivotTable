@@ -18,7 +18,7 @@ namespace PivotTable.Controls.Data
         public DimensionHierarchy Build()
         {
             var keys = BuildKeys();
-            return new DimensionHierarchy(keys);
+            return new DimensionHierarchy(_definition, keys);
         }
 
         private IReadOnlyList<DimensionHierarchyKey> BuildKeys()

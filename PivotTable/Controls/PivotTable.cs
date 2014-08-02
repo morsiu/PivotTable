@@ -1,5 +1,9 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using PivotTable.Controls.Data;
+using PivotTable.Controls.Layout;
+using PivotTable.Controls.Painters;
+using PivotTable.Data;
 
 namespace PivotTable.Controls
 {
@@ -37,6 +41,43 @@ namespace PivotTable.Controls
         static PivotTable()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(PivotTable), new FrameworkPropertyMetadata(typeof(PivotTable)));
+        }
+
+        public static readonly DependencyProperty HorizontalHierarchyProperty = DependencyProperty.Register("HorizontalHierarchy", typeof(DimensionHierarchyDefinition), typeof(PivotTable));
+
+        public static readonly DependencyProperty VerticalHierarchyProperty = DependencyProperty.Register("VerticalHierarchy", typeof(DimensionHierarchyDefinition), typeof(PivotTable));
+
+        public static readonly DependencyProperty CubeProperty = DependencyProperty.Register("Cube", typeof(Cube), typeof(PivotTable));
+
+        public DimensionHierarchyDefinition HorizontalHierarchy
+        {
+            get { return (DimensionHierarchyDefinition)GetValue(HorizontalHierarchyProperty); }
+            set { SetValue(HorizontalHierarchyProperty, value); }
+        }
+
+        public DimensionHierarchyDefinition VerticalHierarchy
+        {
+            get { return (DimensionHierarchyDefinition)GetValue(VerticalHierarchyProperty); }
+            set { SetValue(VerticalHierarchyProperty, value); }
+        }
+
+        public Cube Cube
+        {
+            get { return (Cube)GetValue(CubeProperty); }
+            set { SetValue(CubeProperty, value); }
+        }
+
+        public void Refresh()
+        {
+            var grid = (Grid)GetTemplateChild("PART_Content");
+            var horizontalHierarchy = new DimensionHierarchyBuilder(Cube, HorizontalHierarchy).Build();
+            var verticalHierarchy = new DimensionHierarchyBuilder(Cube, VerticalHierarchy).Build();
+            var spaceAllocator = new GridSpaceAllocator(grid, horizontalHierarchy, verticalHierarchy);
+            spaceAllocator.AllocateSpace();
+            var itemFactory = new ItemFactory();
+            var headerPainter = new HeaderPainter(grid, itemFactory);
+            headerPainter.Paint(horizontalHierarchy, spaceAllocator.HorizontalHierarchyPosition, GridOrientation.Horizontal);
+            headerPainter.Paint(verticalHierarchy, spaceAllocator.VerticalHierarchyPosition, GridOrientation.Vertical);
         }
     }
 }

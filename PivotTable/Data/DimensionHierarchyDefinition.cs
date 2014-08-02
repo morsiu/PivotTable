@@ -8,6 +8,11 @@ namespace PivotTable.Data
     {
         private readonly IReadOnlyList<int> _dimensions;
 
+        public int DimensionCount
+        {
+            get { return _dimensions.Count; }
+        }
+
         public DimensionHierarchyDefinition(IReadOnlyList<int> dimensions)
         {
             _dimensions = dimensions;

@@ -50,6 +50,14 @@
     <Compile Include="Controls\Data\DimensionHierarchy.cs" />
     <Compile Include="Controls\Data\DimensionHierarchyBuilder.cs" />
     <Compile Include="Controls\Data\DimensionHierarchyKey.cs" />
+    <Compile Include="Controls\Data\ItemFactory.cs" />
+    <Compile Include="Controls\Layout\GridArea.cs" />
+    <Compile Include="Controls\Layout\GridOrientation.cs" />
+    <Compile Include="Controls\Layout\GridSpaceAllocator.cs" />
+    <Compile Include="Controls\Layout\GridPosition.cs" />
+    <Compile Include="Controls\Layout\GridSpan.cs" />
+    <Compile Include="Controls\Layout\ZigZagPlacement.cs" />
+    <Compile Include="Controls\Painters\HeaderPainter.cs" />
     <Compile Include="Data\Cube.cs" />
     <Compile Include="Data\CubeBuilder.cs" />
     <Compile Include="Data\CubeDimension.cs" />
@@ -83,9 +91,7 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\Layout\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

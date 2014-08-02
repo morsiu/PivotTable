@@ -4,10 +4,8 @@
         xmlns:c="clr-namespace:PivotTable.Controls;assembly=PivotTable"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <c:PivotTable
-            Padding="20"
-            Margin="40"
-            Background="Red"
+        <c:PivotTable 
+            x:Name="PivotTable"
             BorderBrush="Blue"
             BorderThickness="3" />
     </Grid>
