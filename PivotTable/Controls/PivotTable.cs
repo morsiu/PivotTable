@@ -78,6 +78,8 @@ namespace PivotTable.Controls
             var headerPainter = new HeaderPainter(grid, itemFactory);
             headerPainter.Paint(horizontalHierarchy, spaceAllocator.HorizontalHierarchyPosition, GridOrientation.Horizontal);
             headerPainter.Paint(verticalHierarchy, spaceAllocator.VerticalHierarchyPosition, GridOrientation.Vertical);
+            var factPainter = new FactPainter(grid, Cube, itemFactory);
+            factPainter.Paint(horizontalHierarchy, verticalHierarchy, spaceAllocator.FactTablePosition);
         }
     }
 }

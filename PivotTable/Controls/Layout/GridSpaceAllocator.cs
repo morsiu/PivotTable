@@ -16,6 +16,11 @@ namespace PivotTable.Controls.Layout
             _verticalHierarchy = verticalHierarchy;
         }
 
+        public GridPosition FactTablePosition
+        {
+            get { return new GridPosition(_horizontalHierarchy.LevelCount, _verticalHierarchy.LevelCount); }
+        }
+
         public GridPosition HorizontalHierarchyPosition
         {
             get { return new GridPosition(0, _verticalHierarchy.LevelCount); }

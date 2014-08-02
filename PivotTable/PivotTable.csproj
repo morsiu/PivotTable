@@ -57,6 +57,7 @@
     <Compile Include="Controls\Layout\GridPosition.cs" />
     <Compile Include="Controls\Layout\GridSpan.cs" />
     <Compile Include="Controls\Layout\ZigZagPlacement.cs" />
+    <Compile Include="Controls\Painters\FactPainter.cs" />
     <Compile Include="Controls\Painters\HeaderPainter.cs" />
     <Compile Include="Data\Cube.cs" />
     <Compile Include="Data\CubeBuilder.cs" />

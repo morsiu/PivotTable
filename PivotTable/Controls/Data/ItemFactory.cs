@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using PivotTable.Data;
@@ -7,11 +8,11 @@ namespace PivotTable.Controls.Data
 {
     internal sealed class ItemFactory
     {
-        public UIElement CreateHeaderItem(object measurement)
+        private UIElement CreateItem(object measurement)
         {
             var content = ReferenceEquals(CubeDimension.AggregateMeasurement, measurement)
                 ? "Σ"
-                : measurement.ToString();
+                : measurement == null ? null : measurement.ToString();
             var border = new Border
             {
                 Child =
@@ -28,6 +29,16 @@ namespace PivotTable.Controls.Data
                 BorderThickness = new Thickness(1, 1, 1, 1)
             };
             return border;
+        }
+
+        public UIElement CreateHeaderItem(object fact)
+        {
+            return CreateItem(fact);
+        }
+
+        public UIElement CreateFactItem(object fact)
+        {
+            return CreateItem(fact);
         }
     }
 }

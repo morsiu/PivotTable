@@ -21,6 +21,11 @@ namespace PivotTable.Controls.Data
             get { return _measurements; }
         }
 
+        public FactKey Merge(DimensionHierarchyKey other)
+        {
+            return _factKey.Merge(other._factKey);
+        }
+
         public int CompareTo(DimensionHierarchyKey other)
         {
             if (_measurements.Count != other._measurements.Count)

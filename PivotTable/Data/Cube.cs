@@ -23,6 +23,11 @@ namespace PivotTable.Data
             get { return _factKeys; }
         }
 
+        public IReadOnlyList<object> Facts
+        {
+            get { return _facts; }
+        }
+
         public IReadOnlyList<CubeDimension> Dimensions
         {
             get { return _dimensions; }

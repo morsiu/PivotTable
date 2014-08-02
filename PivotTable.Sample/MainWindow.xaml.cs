@@ -11,8 +11,14 @@ namespace PivotTable.Sample
             InitializeComponent();
 
             PivotTable.Cube = SampleCubes.Sales;
-            PivotTable.HorizontalHierarchy = new DimensionHierarchyDefinition(PivotTable.Cube.Dimensions, "Year", "Quarter");
-            PivotTable.VerticalHierarchy = new DimensionHierarchyDefinition(PivotTable.Cube.Dimensions, "ProductCategory", "Region");
+            PivotTable.HorizontalHierarchy = new DimensionHierarchyDefinition(
+                PivotTable.Cube.Dimensions,
+                "Year",
+                "Quarter");
+            PivotTable.VerticalHierarchy = new DimensionHierarchyDefinition(
+                PivotTable.Cube.Dimensions, 
+                "ProductCategory",
+                "Region");
             PivotTable.Loaded += (s, e) => { PivotTable.Refresh(); };
         }
     }
